@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Reminders</h1>
+
+  <ul>
+    {% for reminder in reminders %}
+      <li>{{ reminder.title }} — {{ reminder.due_date }}</li>
+    {% empty %}
+      <li>No reminders set.</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'add_reminder' %}">Add Reminder</a>
+{% endblock %}
+

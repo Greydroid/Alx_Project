@@ -1,17 +1,4 @@
-{% extends "base.html" %}
 
-{% block content %}
-<div class="container">
-    <h2>Your Animals</h2>
-    <ul>
-        {% for animal in animals %}
-            <li>{{ animal.name }} ({{ animal.species }})</li>
-        {% empty %}
-            <li>No animals added yet.</li>
-        {% endfor %}
-    </ul>
-</div>
-{% endblock %}
 
 
 {% extends "base.html" %}

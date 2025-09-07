@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Vaccinations</h1>
+
+  <ul>
+    {% for vax in vaccinations %}
+      <li>{{ vax.animal.name }} — {{ vax.vaccine_name }} ({{ vax.date_administered }})</li>
+    {% empty %}
+      <li>No vaccinations recorded.</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'add_vaccination' %}">Add Vaccination</a>
+{% endblock %}
+
